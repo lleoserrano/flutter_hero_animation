@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Page2FullSize extends StatefulWidget {
-  const Page2FullSize({Key? key}) : super(key: key);
-
+  const Page2FullSize({Key? key, required this.tag}) : super(key: key);
+  final String tag;
   @override
   _Page2FullSizeState createState() => _Page2FullSizeState();
 }
@@ -32,7 +32,7 @@ class _Page2FullSizeState extends State<Page2FullSize> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Hero(
-                  tag: 'nextPageFullSize',
+                  tag: widget.tag,
                   child: FlutterLogo(
                     size: size.width,
                   ),

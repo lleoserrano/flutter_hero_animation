@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hero_animation/page2.dart';
 import 'package:flutter_hero_animation/page2FullSize.dart';
-import 'package:flutter_hero_animation/page2FullSizeFloating.dart';
-import 'package:flutter_hero_animation/page2Slow.dart';
 
 void main() {
   runApp(MyApp());
@@ -52,7 +50,9 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
-              onPressed: () => _nextPage(Page2()),
+              onPressed: () => _nextPage(Page2(
+                tag: 'nextPage',
+              )),
               child: Column(
                 children: [
                   Hero(
@@ -72,7 +72,9 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: () => _nextPageSlow(Page2Slow()),
+              onPressed: () => _nextPageSlow(Page2(
+                tag: 'nextPageSlow',
+              )),
               child: Column(
                 children: [
                   Hero(
@@ -92,7 +94,9 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: () => _nextPageSlow(Page2FullSize()),
+              onPressed: () => _nextPageSlow(Page2FullSize(
+                tag: 'nextPageFullSize',
+              )),
               child: Column(
                 children: [
                   Hero(
@@ -112,7 +116,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => _nextPageSlow(Page2FullSizeFloating()),
+        onPressed: () => _nextPageSlow(Page2FullSize(
+          tag: 'Page2FullSizeFloating',
+        )),
         heroTag: null,
         child: Hero(
           tag: 'Page2FullSizeFloating',
