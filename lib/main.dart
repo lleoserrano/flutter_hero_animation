@@ -27,18 +27,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Widget spotlight = Container();
-
-  Widget logoA = FlutterLogo(
-    size: 100,
-    style: FlutterLogoStyle.markOnly,
-  );
-
-  Widget logoB = FlutterLogo(
-    size: 100,
-    style: FlutterLogoStyle.stacked,
-  );
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
