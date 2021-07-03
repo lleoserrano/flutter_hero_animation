@@ -21,4 +21,4 @@
 
 
 
-![heroGIF](https://user-images.githubusercontent.com/62712813/124363033-c6654a80-dc30-11eb-94a9-c412b05f7368.gif)
+![ezgif com-resize-2](https://user-images.githubusercontent.com/62712813/124363378-c8300d80-dc32-11eb-9b4d-b985c438615d.gif)
