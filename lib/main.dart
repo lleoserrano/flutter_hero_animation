@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hero_animation/page2.dart';
 import 'package:flutter_hero_animation/page2FullSize.dart';
+import 'package:gif_view/gif_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -85,6 +86,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Hero(
                     tag: 'nextPageSlow',
+                    flightShuttleBuilder:
+                        (ctx, animation, direction, ctx2, ctx3) =>
+                            GifView.asset(
+                      'assets/dash.gif',
+                      height: 200,
+                      width: 200,
+                    ),
                     child: FlutterLogo(
                       size: 100,
                     ),
@@ -152,6 +160,7 @@ class _MyHomePageState extends State<MyHomePage> {
         //
 
         heroTag: 'Page2FullSizeFloating',
+
         child: FlutterLogo(
           size: 40,
         ),
@@ -175,7 +184,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // Aqui navegamos para a pagina seguinte, alterando o Duration para que a transiçã seja mais lenta.
     Navigator.of(context).push(
       PageRouteBuilder(
-        transitionDuration: Duration(milliseconds: 1000),
+        transitionDuration: Duration(milliseconds: 5000),
         pageBuilder: (BuildContext context, Animation<double> animation,
             Animation<double> secondaryAnimation) {
           return page;

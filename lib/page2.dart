@@ -11,7 +11,12 @@ class Page2 extends StatelessWidget {
       body: Column(
         children: [
           Center(
-            child: Hero(tag: tag, child: FlutterLogo()),
+            child: Hero(
+              tag: tag,
+              child: FlutterLogo(
+                size: 50,
+              ),
+            ),
           ),
         ],
       ),
